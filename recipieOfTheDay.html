@@ -25,6 +25,14 @@
     navbardiv.innerHTML=navbar()
     import {getdata,append,random} from "./scripts/showData.js";
   let res= await getdata("http://www.themealdb.com/api/json/v1/1/random.php")
+  console.log(res)
+
   var container =document.getElementById("contain")
   random(container,res)
+//   async function show(){
+//     let anmol= await fetch("http://www.themealdb.com/api/json/v1/1/lookup.php?i=52772")
+// let data = await anmol.json()
+// // console.log(data)
+//   }
+//   show()
 </script>

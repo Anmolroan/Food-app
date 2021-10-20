@@ -13,14 +13,17 @@
        
         
     </div>
-    <div id="searcdetails"> <input type="text" id="searchinput" placeholder="Searchfood">
-       <button> <div class="material-icons" id="span">
+    <div id="searcdetails" > 
+        <p id="lm"> Latest Meals</p>
+       
+        <!-- <input type="text" id="searchinput" placeholder="Searchfood"> -->
+       <!-- <button> <div class="material-icons" id="span">
             search
         </div>
-    </button>
+    </button> -->
     </div>
     <div id="shownames"></div>
-    <div id="container"></div>
+    <div id="cont"></div>
 </body>
 </html>
 <script type="module">
@@ -28,4 +31,10 @@
     import navbar from "./components/navbar.js";
     console.log(navbar)
     navbardiv.innerHTML=navbar()
+   
+    import {getdata,append} from "./scripts/showData.js";
+    let data= await getdata("http://www.themealdb.com/api/json/v1/1/filter.php?a=indian")
+    console.log(data)
+    var container=document.getElementById("cont")
+    append(container,data)
 </script>
