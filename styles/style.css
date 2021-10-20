@@ -104,7 +104,9 @@
           margin: auto;
           /* height: 20px; */
           /* background-color:  rgb(240, 247, 233);  */
-          /* color: crimson; */
+          color: rgb(128, 54, 9);
+          font-weight: 800;
+          font-style: oblique;
           
       }
       

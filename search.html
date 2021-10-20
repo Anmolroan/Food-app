@@ -14,11 +14,14 @@
        
         
     </div>
-    <div id="searcdetails"> <input type="text" id="searchinput" placeholder="Searchfood">
+    <div id="searcdetails"> 
+        <input type="text" id="searchinput" placeholder="Searchfood">
+        
        <button> <div class="material-icons" id="span">
             search
         </div>
     </button>
+    <div id="debounce"></div>
     </div>
     <div id="shownames"></div>
     <div id="container"></div>
@@ -51,10 +54,17 @@ var container= document.getElementById("container")
 
  console.log(data.meals)
  container.innerHTML=null;
+ val.value=null;
  append(container,data.meals)
  
   }
     
-
+var searchinput=document.getElementById("searchinput")
+searchinput.oninput=()=>{
+    var div=document.createElement('div')
+    div.setAttribute("class","sdiv")
+    var debounce=document.getElementById("debounce")
+   
+}
 </script>
 
